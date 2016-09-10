@@ -4,6 +4,8 @@
  * Copyright 2016
  ***********************************/
 
+class CipherBase {}
+
 /**
  * Base function to be overridden by subclasses.
  */

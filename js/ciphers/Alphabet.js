@@ -35,10 +35,12 @@ const ALPHABET_LOWER_CASE = "abcdefghijklmnopqrstuvwxyz",
           'z' : 25
       };
 
-Alphabet.prototype.getLetterFromPosition = function (alphabetType, position) {
-    return alphabetType[position % 26];
+class Alphabet {}
+
+exports.getLetterFromPosition = function (alphabetType, position) {
+    return ALPHABET_LOWER_CASE.charAt(position % 26);
 };
 
-Alphabet.prototype.getPositionFromLetter = function (letter) {
-    return LETTER_POSITION_MAP.get(letter);
+exports.getPositionFromLetter = function (letter) {
+    return LETTER_POSITION_MAP[letter];
 };
