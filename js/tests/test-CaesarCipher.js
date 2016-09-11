@@ -17,16 +17,41 @@ describe ('CaesarCipher' , function () {
         cipher.setShift(0);
     });
 
-    it('should properly encrypt a message', function () {
-        var message = "hello",
+    it('should return original word if cipher is 0 or mulitple of 26', function () {
+        cipher.setShift(0);
+        var message = "abcdefghijklmnopqrstuvwxyz",
             newMessage = cipher.Encrypt(message);
-            assert.deepEqual(newMessage, "khoor");
+        assert.deepEqual(newMessage, "abcdefghijklmnopqrstuvwxyz");
+        cipher.setShift(26);
+        newMessage = cipher.Encrypt(message);
+        assert.deepEqual(newMessage, "abcdefghijklmnopqrstuvwxyz");
+        cipher.setShift(52);
+        newMessage = cipher.Encrypt(message);
+        assert.deepEqual(newMessage, "abcdefghijklmnopqrstuvwxyz");
     });
 
-    it('should properly descrypt a function', function() {
-        var message = "khoor",
+    it('should properly encrypt a word', function () {
+        var message = "abcdefghijklmnopqrstuvwxyz",
+            newMessage = cipher.Encrypt(message);
+        assert.deepEqual(newMessage, "defghijklmnopqrstuvwxyzabc");
+    });
+
+    it('should properly decrypt a word', function() {
+        var message = "defghijklmnopqrstuvwxyzabc",
             newMessage = cipher.Decrypt(message);
-            assert.deepEqual(newMessage, "hello");
+        assert.deepEqual(newMessage, "abcdefghijklmnopqrstuvwxyz");
+    });
+
+    it('should properly encrypt a string with white space', function () {
+        var message = "hello nice to meet you",
+            newMessage = cipher.Encrypt(message);
+        assert.deepEqual(newMessage, "khoor qlfh wr phhw brx");
+    });
+
+    it('should properly decrypt a string with white space', function () {
+        var message = "khoor qlfh wr phhw brx",
+            newMessage = cipher.Decrypt(message);
+        assert.deepEqual(newMessage, "hello nice to meet you");
     });
 
     it('should be able to change its shift between 0-25', function() {

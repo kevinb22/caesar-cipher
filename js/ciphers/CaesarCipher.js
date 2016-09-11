@@ -78,6 +78,9 @@ function decryptWord (word, shiftValue) {
     for (var i = 0; i < word.length; i++) {
         oldPosition = Alphabet.getPositionFromLetter(word.charAt(i));
         newPosition = (oldPosition - shiftValue) % 26;
+        if(newPosition < 0) {
+            newPosition += 26;
+        }
         newWord += Alphabet.getLetterFromPosition(Alphabet.ALPHABET_LOWER_CASE, newPosition);
     }
     return newWord;
