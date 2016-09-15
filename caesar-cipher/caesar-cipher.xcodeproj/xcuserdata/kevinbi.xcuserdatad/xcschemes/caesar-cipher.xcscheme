@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A28C8A41D822D4600F4E087"
+               BlueprintIdentifier = "0AE7F98E1D8A02A300863661"
                BuildableName = "caesar-cipher.app"
                BlueprintName = "caesar-cipher"
                ReferencedContainer = "container:caesar-cipher.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A28C8B81D822D4600F4E087"
+               BlueprintIdentifier = "0AE7F9A21D8A02A300863661"
                BuildableName = "caesar-cipherTests.xctest"
                BlueprintName = "caesar-cipherTests"
                ReferencedContainer = "container:caesar-cipher.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A28C8C31D822D4600F4E087"
+               BlueprintIdentifier = "0AE7F9AD1D8A02A300863661"
                BuildableName = "caesar-cipherUITests.xctest"
                BlueprintName = "caesar-cipherUITests"
                ReferencedContainer = "container:caesar-cipher.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0A28C8A41D822D4600F4E087"
+            BlueprintIdentifier = "0AE7F98E1D8A02A300863661"
             BuildableName = "caesar-cipher.app"
             BlueprintName = "caesar-cipher"
             ReferencedContainer = "container:caesar-cipher.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0A28C8A41D822D4600F4E087"
+            BlueprintIdentifier = "0AE7F98E1D8A02A300863661"
             BuildableName = "caesar-cipher.app"
             BlueprintName = "caesar-cipher"
             ReferencedContainer = "container:caesar-cipher.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0A28C8A41D822D4600F4E087"
+            BlueprintIdentifier = "0AE7F98E1D8A02A300863661"
             BuildableName = "caesar-cipher.app"
             BlueprintName = "caesar-cipher"
             ReferencedContainer = "container:caesar-cipher.xcodeproj">
