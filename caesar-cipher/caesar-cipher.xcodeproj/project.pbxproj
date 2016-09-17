@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC2DAAA1D8CA0F6005ECE30 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2DAA91D8CA0F6005ECE30 /* LaunchScreen.xib */; };
+		0AC2DAB21D8CAEF8005ECE30 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2DAB11D8CAEF8005ECE30 /* Alphabet.swift */; };
+		0AC2DAB41D8CAF02005ECE30 /* CaesarCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2DAB31D8CAF02005ECE30 /* CaesarCipher.swift */; };
 		0AE7F9931D8A02A300863661 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7F9921D8A02A300863661 /* AppDelegate.swift */; };
 		0AE7F9951D8A02A300863661 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7F9941D8A02A300863661 /* ViewController.swift */; };
 		0AE7F9981D8A02A300863661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE7F9961D8A02A300863661 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AC2DAA91D8CA0F6005ECE30 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		0AC2DAB11D8CAEF8005ECE30 /* Alphabet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
+		0AC2DAB31D8CAF02005ECE30 /* CaesarCipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaesarCipher.swift; sourceTree = "<group>"; };
 		0AE7F98F1D8A02A300863661 /* caesar-cipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "caesar-cipher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE7F9921D8A02A300863661 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AE7F9941D8A02A300863661 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,9 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				0AE7F9921D8A02A300863661 /* AppDelegate.swift */,
+				0AC2DAB11D8CAEF8005ECE30 /* Alphabet.swift */,
+				0AC2DAB31D8CAF02005ECE30 /* CaesarCipher.swift */,
 				0AE7F9941D8A02A300863661 /* ViewController.swift */,
 				0AE7F9961D8A02A300863661 /* Main.storyboard */,
 				0AE7F9991D8A02A300863661 /* Assets.xcassets */,
+				0AC2DAA91D8CA0F6005ECE30 /* LaunchScreen.xib */,
 				0AE7F99B1D8A02A300863661 /* LaunchScreen.storyboard */,
 				0AE7F99E1D8A02A300863661 /* Info.plist */,
 			);
@@ -231,6 +240,7 @@
 			files = (
 				0AE7F99D1D8A02A300863661 /* LaunchScreen.storyboard in Resources */,
 				0AE7F99A1D8A02A300863661 /* Assets.xcassets in Resources */,
+				0AC2DAAA1D8CA0F6005ECE30 /* LaunchScreen.xib in Resources */,
 				0AE7F9981D8A02A300863661 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC2DAB21D8CAEF8005ECE30 /* Alphabet.swift in Sources */,
 				0AE7F9951D8A02A300863661 /* ViewController.swift in Sources */,
 				0AE7F9931D8A02A300863661 /* AppDelegate.swift in Sources */,
+				0AC2DAB41D8CAF02005ECE30 /* CaesarCipher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +494,7 @@
 				0AE7F9B91D8A02A300863661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AE7F9BA1D8A02A300863661 /* Build configuration list for PBXNativeTarget "caesar-cipherTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +503,7 @@
 				0AE7F9BC1D8A02A300863661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AE7F9BD1D8A02A300863661 /* Build configuration list for PBXNativeTarget "caesar-cipherUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +512,7 @@
 				0AE7F9BF1D8A02A300863661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
