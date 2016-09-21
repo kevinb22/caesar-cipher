@@ -16,11 +16,11 @@ class CaesarCipher {
         return self.shift
     }
     
-    func setShift(newShift: Int) {
+    func setShift(_ newShift: Int) {
         self.shift = newShift
     }
 
-    func Encrypt (message:String) -> String {
+    func Encrypt (_ message:String) -> String {
         if (self.shift == 0) {
             return message;
         }
@@ -35,7 +35,7 @@ class CaesarCipher {
         return ret;
     };
 
-    func encryptWord (word: String, shiftValue: Int) -> String {
+    func encryptWord (_ word: String, shiftValue: Int) -> String {
         if (word == " ") {
             return word;
         }
@@ -50,7 +50,7 @@ class CaesarCipher {
         return newWord;
     }
 
-    func Decrypt (message: String) -> String {
+    func Decrypt (_ message: String) -> String {
         var ret = "",
         shiftValue = self.shift,
         newMessage = message.characters.split{$0 == " "}.map(String.init)
@@ -61,7 +61,7 @@ class CaesarCipher {
         return ret;
     };
 
-    func decryptWord (word: String, shiftValue: Int) -> String {
+    func decryptWord (_ word: String, shiftValue: Int) -> String {
         if (word == " ") {
             return word;
         }

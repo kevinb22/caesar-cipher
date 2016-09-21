@@ -39,11 +39,11 @@ class Alphabet {
     "z" : 25
     ];
     
-    func getLetterFromPosition(position: Int) -> String {
-        return String(ALPHABET_LOWER_CASE[ALPHABET_LOWER_CASE.startIndex.advancedBy(position % 26)]);
+    func getLetterFromPosition(_ position: Int) -> String {
+        return String(ALPHABET_LOWER_CASE[ALPHABET_LOWER_CASE.characters.index(ALPHABET_LOWER_CASE.startIndex, offsetBy: position % 26)]);
     };
     
-    func getPositionFromLetter(letter: String) -> Int {
+    func getPositionFromLetter(_ letter: String) -> Int {
         return LETTER_POSITION_MAP[letter]!;
     };
 }

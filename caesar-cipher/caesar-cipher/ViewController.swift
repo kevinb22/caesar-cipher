@@ -9,8 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+
     
-    
+    @IBOutlet var outputOutlet: UITextView!
     @IBOutlet var buttonOutlet: UIButton!
     @IBOutlet var encryptDecryptControlOutlet: UISegmentedControl!
     var cipher = CaesarCipher()
@@ -19,6 +20,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        outputOutlet.layer.borderWidth = 1.0;
+        let myColor : UIColor = UIColor( red: 0.5, green: 0.5, blue:0, alpha: 1.0 )
+        outputOutlet.layer.borderColor = myColor.cgColor;
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,31 +30,48 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func encryptDecryptControl(sender: UISegmentedControl) {
+    @IBAction func encryptDecryptControl(_ sender: UISegmentedControl) {
         if (sender.selectedSegmentIndex == 0) {
-            buttonOutlet.setTitle("Encrypt", forState: UIControlState.Normal)
+            buttonOutlet.setTitle("Encrypt", for: UIControlState())
         } else if (sender.selectedSegmentIndex == 1) {
-            buttonOutlet.setTitle("Decrypt", forState: UIControlState.Normal)
+            buttonOutlet.setTitle("Decrypt", for: UIControlState())
         }
     }
     
-    @IBAction func messageAction(sender: UITextField) {
+    @IBAction func messageAction(_ sender: UITextField) {
+        self.message = sender.text!
+    }
+    
+    @IBAction func messageAction2(_ sender: UITextField) {
         self.message = sender.text!
     }
 
-    @IBAction func shiftAction(sender: UITextField) {
+    @IBAction func shiftAction(_ sender: UITextField) {
         if (sender.text == "") {
             return
         }
-        let characterSet = NSCharacterSet(charactersInString: "abcdefghijklmnopqrstuvwxyz")
-        if let _ = sender.text!.rangeOfCharacterFromSet(characterSet, options: .CaseInsensitiveSearch) {
+        let characterSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyz")
+        if let _ = sender.text!.rangeOfCharacter(from: characterSet, options: .caseInsensitive) {
             return
         }
         let val:Int? = Int(sender.text!)!
         cipher.setShift(val!)
     }
     
-    @IBAction func buttonAction(sender: UIButton) {
+    @IBAction func shiftAction2(_ sender: UITextField) {
+        if (sender.text == "") {
+            return
+        }
+        let characterSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyz")
+        if let _ = sender.text!.rangeOfCharacter(from: characterSet, options: .caseInsensitive) {
+            return
+        }
+        let val:Int? = Int(sender.text!)!
+        cipher.setShift(val!)
+    }
+
+    
+    @IBAction func buttonAction(_ sender: UIButton) {
         if(self.message == "") {
             return;
         }
@@ -62,7 +83,7 @@ class ViewController: UIViewController {
             res = cipher.Decrypt(self.message);
         }
         res = String(res.characters.dropFirst());
-        print(res);
+        outputOutlet.text = res;
     }
 }
 
