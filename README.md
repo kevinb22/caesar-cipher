@@ -8,11 +8,4 @@
 TODOs
 -------------------
 - Fit and finish
-  - Have some sort of view panel to display the encrypted/decrypted message.
-  - Fix action for setting the message and shift values currently based on 
-  whether or not the enter key was hit, should be when the label is no longer
-  edited.
-  - Figure out whether or not the labels should be cleared (if a shift or the 
-  message it change or something other).
   - Maybe change the color scheme so the app doesn't look terribly generic.
-- Edit the scheme for the swift tests.

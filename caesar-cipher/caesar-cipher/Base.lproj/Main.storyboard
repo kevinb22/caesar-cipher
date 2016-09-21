@@ -97,6 +97,7 @@
                     <connections>
                         <outlet property="buttonOutlet" destination="L5w-C9-QAt" id="FcW-CH-9pU"/>
                         <outlet property="encryptDecryptControlOutlet" destination="aRC-8i-Kr7" id="VES-GX-chJ"/>
+                        <outlet property="messageOutlet" destination="FII-eU-hSo" id="WeQ-Tv-YXg"/>
                         <outlet property="outputOutlet" destination="YKP-dl-PjJ" id="vuT-EC-d5x"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBOutlet var messageOutlet: UITextField!
     @IBOutlet var outputOutlet: UITextView!
     @IBOutlet var buttonOutlet: UIButton!
     @IBOutlet var encryptDecryptControlOutlet: UISegmentedControl!
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
         } else if (sender.selectedSegmentIndex == 1) {
             buttonOutlet.setTitle("Decrypt", for: UIControlState())
         }
+        messageOutlet.text = "";
     }
     
     @IBAction func messageAction(_ sender: UITextField) {
@@ -82,7 +84,6 @@ class ViewController: UIViewController {
         } else if (buttonOutlet.titleLabel!.text == "Decrypt") {
             res = cipher.Decrypt(self.message);
         }
-        res = String(res.characters.dropFirst());
         outputOutlet.text = res;
     }
 }

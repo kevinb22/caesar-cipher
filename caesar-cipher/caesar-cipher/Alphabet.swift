@@ -8,6 +8,7 @@
 
 import Foundation
 class Alphabet {
+    let SHIFT_SIZE = 26;
     let ALPHABET_LOWER_CASE = "abcdefghijklmnopqrstuvwxyz";
     let ALPHABET_UPPER_CASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let LETTER_POSITION_MAP = [
@@ -40,7 +41,7 @@ class Alphabet {
     ];
     
     func getLetterFromPosition(_ position: Int) -> String {
-        return String(ALPHABET_LOWER_CASE[ALPHABET_LOWER_CASE.characters.index(ALPHABET_LOWER_CASE.startIndex, offsetBy: position % 26)]);
+        return String(ALPHABET_LOWER_CASE[ALPHABET_LOWER_CASE.characters.index(ALPHABET_LOWER_CASE.startIndex, offsetBy: position % SHIFT_SIZE)]);
     };
     
     func getPositionFromLetter(_ letter: String) -> Int {
